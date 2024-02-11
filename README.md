@@ -1,16 +1,16 @@
-##Kidney Tumor Segmentation
+# Kidney Tumor Segmentation
 
 
 Semantic segmentation is a critical task in medical imaging that involves classifying each pixel in an image into a specific category. One such application is the segmentation of kidney and tumor regions from CT scan images. In this regard, the U-Net architecture has proven to be highly effective, achieving excellent results in medical imaging segmentation. 
 The objective of this project is to explore kidney and kidney tumor semantic segmentation techniques. For this purpose, it was acquired the dataset consisting of the ground truth semantic segmentations for arterial phase abdominal CT scans of 210 distinct kidney cancer patients, released for model training and validation within the KiTS19 Challenge.
 
-#Case Selection:
+## Case Selection:
 
 In order to reduce the dimension of the dataset, 48 of the 210 cases were selected based on their size and Hounsfield Units range. In particular, cases with the following characteristics were selected:
 Number of slices not greater than 110.
 Hounsfield Units range between -1024 and 1679.
 
-#Data Preprocessing:
+## Data Preprocessing:
 
 CT scan data initially in Nifty format were preprocessed using the MONAI framework.
 The LoadImaged function is used to load the image and its corresponding segmentation, which are stored as separate files in the dataset. 
@@ -23,13 +23,13 @@ The preprocessed volumes are then converted to a 2D format by saving each vertic
 
 
 
-#Training:
+## Training:
 
 For the project it is employed a standard 2D U-Net architecture, which consists of a series of convolutional and pooling layers, to learn features from the images. The U-Net architecture is unique in that it uses skip connections between the encoder and decoder, which enables it to retain more detailed information during the downsampling process.
 The model uses the ReLu activation function, the Adam optimizer, the categorical cross-entropy loss function and, to evaluate the model's performance, the mean intersection over union (IoU) metric. Moreover, for the output, a softmax activation function is used.
 The main training is performed on a dataset of 2500 training images with a batch size of 50 and 1100 validation images with a batch size of 22 for 5 epochs each consisting of 50 steps. 
 
-#Results:
+## Results:
 
 After training, the mean IoU value is 0.989 on the validation dataset.
 
