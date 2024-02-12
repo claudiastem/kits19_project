@@ -4,6 +4,8 @@
 Semantic segmentation is a critical task in medical imaging that involves classifying each pixel in an image into a specific category. One such application is the segmentation of kidney and tumor regions from CT scan images. In this regard, the U-Net architecture has proven to be highly effective, achieving excellent results in medical imaging segmentation. 
 The objective of this project is to explore kidney and kidney tumor semantic segmentation techniques. For this purpose, it was acquired the dataset consisting of the ground truth semantic segmentations for arterial phase abdominal CT scans of 210 distinct kidney cancer patients, released for model training and validation within the KiTS19 Challenge.
 
+![cover](cover.png)
+
 ## Case Selection:
 
 In order to reduce the dimension of the dataset, 48 of the 210 cases were selected based on their size and Hounsfield Units range. In particular, cases with the following characteristics were selected:
