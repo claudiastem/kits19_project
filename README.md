@@ -40,7 +40,7 @@ After training, the mean IoU value is 0.989 on the validation dataset.
 
 This accuracy value though, does not seem to be reflected in the predicted segmentation. 
 
-![predicted](assets/previsione_t5.png)
+![predicted](assets/predicted_t5.png)
 
 This could be due to a number of reasons: implementation of the network, choice of hyperparameters for the architecture, etc. To give a definitive answer, a thorough study with extensive hyperparameter optimization for each of the architectures is warranted.
 
